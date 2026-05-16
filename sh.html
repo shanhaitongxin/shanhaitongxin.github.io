@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山海盟 - 缘起山海，共赴盟约</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #eaeaea;
+            line-height: 1.6;
+        }
+
+        /* 头部横幅 */
+        .banner {
+            height: 100vh;
+            background: url('https://picsum.photos/id/10/1920/1080') no-repeat center center/cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .banner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .banner h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 15px rgba(0, 170, 255, 0.7);
+        }
+
+        .banner p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        /* 导航栏 */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: #00aaff;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: #eaeaea;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00aaff;
+        }
+
+        /* 通用区块 */
+        section {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #00aaff;
+        }
+
+        /* 关于我们 */
+        .about {
+            background: #16213e;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* 成员卡片 */
+        .members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .member-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 170, 255, 0.2);
+        }
+
+        .member-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00aaff, #764ba2);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            color: #00aaff;
+            opacity: 0.8;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #0f0f23;
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- 横幅 -->
+    <div class="banner">
+        <div class="banner-content">
+            <h1>山海盟</h1>
+            <p>缘起山海，共赴盟约，以梦为舟，以心为帆</p >
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="logo">山海盟</div>
+        <div class="nav-links">
+           <a href="file:///G:/zhuomian/chenyuan.html" target="_self">联系我们</a>
+        </div>
+    </nav>
+
+    <!-- 关于我们 -->
+    <section id="about" class="about">
+        <h2 class="section-title">关于山海盟</h2>
+        <div class="about-content">
+            <p>
+                山海盟，始于2024，创始人余虹财与张伟棋深夜晚自习与食堂的美好邂逅中灵感突发，创始了山海。
+                山海盟第一次招生仅15人，日后逐渐演变成对新生友好交流，讨论学习的组织
+                是一群志同道合之人，因山海之志而聚，因盟约之心而守
+                我们以山为骨，以海为魂，以赤诚之心，赴未来之约
+                盟中之人，或有凌云之志，或怀江海之怀，皆以诚信为基，以互助为道
+                愿我们如高山般坚定，如大海般包容，携手同行，共赴山海。
+            </p >
+        </div>
+    </section>
+
+    <!-- 盟中成员 -->
+    <section id="members">
+        <h2 class="section-title">盟中成员</h2>
+        <div class="members">
+            <div class="member-card">
+                <div class="member-avatar">山</div>
+                <h3 
+                class="member-name">盟主</marquee>
+            </h3>
+                <p class="member-role">当前盟主</p >
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">云</div>
+                <h3 class="member-name">副盟主</h3>
+                <p class="member-role">当前副盟主</p >
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">风</div>
+                <h3 class="member-name">风旅</h3>
+                <p class="member-role">与其他学校联系人</p >
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">洋</div>
+                <h3 class="member-name">水滴</h3>
+                <p class="member-role">盟内成员</p >
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer id="contact">
+        <p>© 2026 山海盟 | 缘起山海，共赴盟约</p >
+    </footer>
+</body>
+</html>
